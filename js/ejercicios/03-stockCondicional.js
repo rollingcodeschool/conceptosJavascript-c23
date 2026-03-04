@@ -4,10 +4,16 @@ const stock = parseInt(prompt("Ingresa el valor del stock"));
 const pantalla = document.getElementById("pantalla");
 console.log(pantalla);
 
-if (stock > 0) {
-  //   alert("Disponible");
-  pantalla.innerHTML = "Disponible";
-} else {
-  // alert("Sin stock")
-  pantalla.innerHTML = "<span class ='text-danger'>Sin stock</span>";
-}
+// if (stock > 0) {
+//   //   alert("Disponible");
+//   pantalla.innerHTML = "Disponible";
+// } else {
+//   // alert("Sin stock")
+//   pantalla.innerHTML = "<span class ='text-danger'>Sin stock</span>";
+// }
+
+// operador ternario (condicion logica) ? lo que quiero hacer si es verdadero : lo que quiero hacer si es falsa la condicion
+
+stock > 0
+  ? (pantalla.innerHTML = "Disponible")
+  : (pantalla.innerHTML = "<span class ='text-danger'>Sin stock</span>");

@@ -4,11 +4,22 @@
 // const numero1 = parseInt( prompt('Ingresa un número') )
 const numero1 = Number(prompt("Ingresa un número"));
 // const numero1 = +( prompt('Ingresa un número') )
-const total = numero1 % 2;
-console.log(total);
+console.log(numero1);
+console.log(isNaN(numero1));
+console.log(isNaN(4));
 
-if (total === 0) {
-  alert("El número es par");
+// el valor de numero1 es un numero?
+// !false => true
+// !true => false
+if (!isNaN(numero1)) {
+  const total = numero1 % 2;
+  console.log(total);
+  if (total === 0) {
+    alert("El número es par");
+  } else {
+    alert("El número es impar");
+  }
 } else {
-  alert("El número es impar");
+  alert("Ingresaste un valor erroneo");
 }
+

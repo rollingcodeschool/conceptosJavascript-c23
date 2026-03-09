@@ -6,7 +6,6 @@
 const opcion = prompt(
   "Ingresa una opción: 1-consultar el saldo - 2-ingresar dinero - 3-extraer dinero ",
 );
-
 let saldo = 10000;
 
 // if (opcion === "1") {
@@ -20,11 +19,15 @@ let saldo = 10000;
 // }
 
 switch (opcion) {
+  case "saldo":
   case "1":
+  case 1:
     //aqui agrego todas las lineas de codigo que necesito si la opción ingresada por el usuario es1
     alert("Tu saldo actual es $" + saldo);
     break;
   case "2":
+  case 2:
+  case "deposito":
     //aqui agrego todas las lineas de codigo que necesito si la opción ingresada por el usuario es 2
     const deposito = parseFloat(
       prompt("Ingresa el monto que deseas depositar"),
@@ -33,6 +36,7 @@ switch (opcion) {
     alert(`Ingresaste $${deposito}, tu saldo actual es $${saldo}`);
     break;
   case "3":
+  case "extraer":
     //aqui agrego todas las lineas de codigo que necesito si la opción ingresada por el usuario es 3
     const extraccion = parseFloat(prompt("Ingresa el monto a extraer"));
     //verificar si el usuario puede extraer el monto solicitado

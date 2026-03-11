@@ -3,12 +3,12 @@
 const pantalla = document.getElementById('pantalla')
 const filas = parseInt(prompt('Ingresa el número de filas'))
 const columnas = parseInt(prompt('Ingresa el número de columnas'))
-
+let celda = filas * columnas
 document.writeln('<table class="table table-striped"> <tbody id="pantalla">')
 for(let indiceFilas=1; indiceFilas <= filas; indiceFilas++){
     document.writeln(`<tr>`)
     for(let indiceColumnas=1; indiceColumnas <= columnas; indiceColumnas++){
-        document.writeln(`<td>1</td>`)
+        document.writeln(`<td>${celda--}</td>`)
     }
     document.writeln(`</tr>`)
 }

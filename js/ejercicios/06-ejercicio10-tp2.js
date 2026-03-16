@@ -15,3 +15,5 @@ for(let indiceFilas=1; indiceFilas <= filas; indiceFilas++){
 
 document.writeln('</tbody></table>')
 
+
+

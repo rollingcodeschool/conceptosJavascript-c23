@@ -11,14 +11,23 @@ function saludarPersona(persona, edad = 20 ){
 }
 
 //funciones que retornan un valor
-function aplicarDescuento(precio, descuento){
-    const precioFinal = precio - ((precio * descuento)/100)    
-    // let precioFinal = ((precio * descuento)/100)  
-    // precioFinal = precio - precioFinal  
-    console.log(precioFinal)
-    return precioFinal
-    // nunca se debe agregar una linea de codigo debajo del return dentro de la funcion
-}
+// function aplicarDescuento(precio, descuento){
+//     const precioFinal = precio - ((precio * descuento)/100)    
+//     // let precioFinal = ((precio * descuento)/100)  
+//     // precioFinal = precio - precioFinal  
+//     console.log(precioFinal)
+//     return precioFinal
+//     // nunca se debe agregar una linea de codigo debajo del return dentro de la funcion
+// }
+
+// expresion de funcion
+// const aplicarDescuento = function (precio, descuento){
+//     const precioFinal = precio - ((precio * descuento)/100)    
+//     return precioFinal
+// }
+
+// arrow functions
+const aplicarDescuento = (precio, descuento) => precio - ((precio * descuento)/100);
 
 console.log('hola')
 // invocar o llamar a la funcion

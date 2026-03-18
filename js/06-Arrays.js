@@ -62,8 +62,8 @@ mostrarPeliculas('Eliminamos el primer elemento del array');
 peliculas.pop()
 mostrarPeliculas('Eliminamos el ultimo elemento del array');
 
-// peliculas.splice(7) // borra todos los elementos desde la posicion 7 inclusive
-peliculas.splice(7,1)
+peliculas.splice(7) // borra todos los elementos desde la posicion 7 inclusive
+// peliculas.splice(7,1)
 mostrarPeliculas('Eliminamos un elemento del medio del array');
 
 //filtrar las peliculas de star wars
@@ -71,10 +71,9 @@ console.log(peliculas[1].includes('star'))
 console.log(peliculas[1].includes('STAR WAR'))
 console.log(peliculas[1].includes('star war'))
 
-// const sagaStarWar = peliculas.filter( pelicula => pelicula === 'Jurassic park II' )
-console.log(peliculas[0].includes('star') )
+const sagaStarWar = peliculas.filter( pelicula => pelicula.toLowerCase().includes('star') )
+console.log('Saga de Star Wars: ', sagaStarWar )
 // ! todo: verificar sintaxis del filtro
-// const sagaStarWar = peliculas.filter( pelicula => pelicula.includes('star') )
 
 const aniosEstreno = [2010, 2012 , 2010, 2020, 2010, 2015]
 const anioFiltrado = aniosEstreno.filter((item)=> item >= 2012 )

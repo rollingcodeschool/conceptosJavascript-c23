@@ -71,9 +71,9 @@ console.log(peliculas[1].includes('star'))
 console.log(peliculas[1].includes('STAR WAR'))
 console.log(peliculas[1].includes('star war'))
 
+// TODO: Corrección de datos del array para poder filtrar solo strings. 
 const sagaStarWar = peliculas.filter( pelicula => pelicula.toLowerCase().includes('star') )
 console.log('Saga de Star Wars: ', sagaStarWar )
-// ! todo: verificar sintaxis del filtro
 
 const aniosEstreno = [2010, 2012 , 2010, 2020, 2010, 2015]
 const anioFiltrado = aniosEstreno.filter((item)=> item >= 2012 )

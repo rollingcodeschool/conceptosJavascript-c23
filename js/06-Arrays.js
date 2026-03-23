@@ -71,6 +71,11 @@ console.log(peliculas[1].includes('star'))
 console.log(peliculas[1].includes('STAR WAR'))
 console.log(peliculas[1].includes('star war'))
 
+// agregar algunas pelis extras de star wars
+peliculas.push('Star wars: Episodio 3')
+peliculas.unshift('Star wars: el mandalorian')
+mostrarPeliculas('agregamos 2 pelis de star wars para filtrar');
+
 // TODO: Corrección de datos del array para poder filtrar solo strings. 
 const sagaStarWar = peliculas.filter( pelicula => pelicula.toLowerCase().includes('star') )
 console.log('Saga de Star Wars: ', sagaStarWar )
@@ -92,3 +97,9 @@ const indicePeliBuscada =  peliculas.findIndex((peli)=> peli.toLowerCase().inclu
 const indicePeliBuscada2 =  peliculas.findIndex((peli)=> peli === 'Interestelar' )
 console.log('Ejemplo de findIndex jurassic park:', indicePeliBuscada)
 console.log('Ejemplo de findIndex interestelar:', indicePeliBuscada2)
+
+// mostrar el array de peliculas de star wars
+pantalla.innerHTML += '<h2 class=text-danger>Peliculas de star wars</h2>'
+
+let itemStarWars = sagaStarWar.map((peli) => `<li>${peli}</li>`).join(' ')
+pantalla.innerHTML += `<ul>${itemStarWars}</ul>`

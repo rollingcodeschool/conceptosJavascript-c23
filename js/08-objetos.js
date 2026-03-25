@@ -56,4 +56,10 @@ pantalla.innerHTML += `<p>Estado fuera del bucle: ${pelicula.estado}</p>`;
 pelicula.estado = false;
 pantalla.innerHTML += `<p>Estado fuera del bucle: ${pelicula.estado}</p>`;
 
-// pelicula = true; esto no puedo hacer si mi objeto es una constante
+//pelicula = true; //esto no puedo hacer si mi objeto es una constante
+
+//eliminar una propiedad del objeto
+delete pelicula.estado
+pantalla.innerHTML += `<p>¿Estado eliminado?: ${pelicula.estado}</p>`;
+console.log(pelicula)
+

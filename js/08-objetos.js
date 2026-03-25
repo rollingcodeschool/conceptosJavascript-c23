@@ -15,10 +15,14 @@ const pelicula = {
   actores: ["actor 1", "actor 2", "actor 3", "actor 3"],
   anioEstreno: 2026,
   //metodos
-  reproducir: function () {
+  reproducir: function (fghfg) {
+    console.log(this)
+    const texto = `<p class='lead'>Comenzo la reproducción de la pelicula ${this.titulo} ▶️</p>`;
     console.log("reproduciendo");
+    return texto
   },
   stop: () => {
+    console.log('Dentro de la funcion stop', this)
     console.log("se detuvo la peli");
   },
 };
@@ -63,3 +67,8 @@ delete pelicula.estado
 pantalla.innerHTML += `<p>¿Estado eliminado?: ${pelicula.estado}</p>`;
 console.log(pelicula)
 
+// usando los métodos
+pantalla.innerHTML += pelicula.reproducir()
+
+pelicula.stop()
+console.log(this)
